@@ -1,17 +1,19 @@
 fun main(){
-    val con = mutableMapOf("" to "","" to "","" to "")
+    val con = mutableMapOf<String, String>()
 
-   var num=0
-    while (num<3){
+    for(i in 0..2){
+        var country = ""
+        var capital = ""
         println("Enter country  :")
-        var country = readLine()!!.toString()
+        country= readLine()!!
+
         println("Enter capital  :")
-        var capital = readLine()!!.toString()
-        num++
+        capital= readLine()!!
         con[country]=capital
+
     }
     for (i in con){
-        println(i)
+        println("the capital of ${i.key} : is ${i.value}")
     }
 
 }
